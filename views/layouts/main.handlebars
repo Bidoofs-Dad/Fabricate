@@ -4,28 +4,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="../../public/css/temp.css">
+    {{!-- STYLE LINKS --}}
+      <link rel="stylesheet" href="../../public/css/temp.css">
+    {{!-- FONT LINKS --}}
+
+    {{!-- SCRIPT LINKS --}}
+      <script src="https://kit.fontawesome.com/7683696611.js" crossorigin="anonymous"></script>
     <title>Fabricate</title>
 </head>
-<header>
-    <h1>
-      Fabricate
-    </h1>
-    {{#if logged_in}}
-    <nav>
-      <button class="btn" id="logout">logout</button>
-    </nav>
-    {{/if}}
-  </header>
-  <main>
-    {{{ body }}}
 
-    {{#if logged_in}}
+<body>
+  <header>
+    <nav>
+      <div class= "nav-section" id="nav-logo-section">
+        <h1>FABRICATE LOGO</h1> 
+      </div>
+
+      <div class="nav-section" id="nav-link-section">
+        <a href="#">PAGE 1</a>
+        <a href="#">PAGE 2</a>
+        <a href="#">PAGE 3</a>
+        <a href="#">PAGE 4</a>
+      </div>
+
+      <div class="nav-section" id="nav-social-section">
+        <a href="" target="_blank">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+
+      <div class="nav-section" id="nav-contact-section">
+        <a href="#" target="_blank">
+          GET IN TOUCH
+        </a>
+      </div>
+
+      {{#if logged_in}}
+      <button class="btn" id="logout">logout</button>
+      {{/if}} 
+
+    </nav>
+  </header>
+
+  <main>
+    {{!-- Body content here --}}
+    {{{ body }}}
+  </main>
+
+  <footer>
+    <div class="footer-section">
+      <p>FOOTER</p>
+    </div>
+  </footer>
+
+  {{!-- SCRIPT LINKS --}}
+  {{#if logged_in}}
   <script src="../../public/js/logout.js"></script>
   {{/if}}
-  </main>
-  <footer>
-      
-  </footer>
+</body>
 
 </html>
