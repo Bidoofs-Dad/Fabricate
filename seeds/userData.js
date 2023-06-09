@@ -6,6 +6,6 @@ const userData = [
         password: "IlovePoo",
     }
 ];
-const User = () => User.bulkCreate(userData);
+const seedUser = () => User.bulkCreate(userData);
 
-module.exports = User;
+module.exports = seedUser;

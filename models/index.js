@@ -14,7 +14,7 @@ Character.hasOne(Stats, {
     foreignKey: "character_id",
 })
 
-Stats.belognsTo(Character, {
+Stats.belongsTo(Character, {
     foreignKey: "character_id",
 })
 
