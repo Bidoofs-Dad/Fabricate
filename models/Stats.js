@@ -47,4 +47,4 @@ Stats.init(
     }
 );
 
-module.exports = Character;
+module.exports = Stats;

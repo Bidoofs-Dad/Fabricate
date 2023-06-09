@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS --database name;
-CREATE DATABASE --database name;
+DROP DATABASE IF EXISTS ballsdotexe_db;
+CREATE DATABASE ballsdotexe_db;
