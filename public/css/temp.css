@@ -1,3 +1,68 @@
-/* MAIN */
+/* General */
+:root {
+    --g1: rgb(98, 0, 234);
+    --g2: rgb(236, 64, 122);
+  
+    --border-color: rgb(15, 15, 15);
+  }
+  
+  body {
+    background-size: 200%;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0px;
+  }
+  
+/* Nav */
 
-/* nav styles */
+  nav {
+    display: flex;
+    width: 100%;
+    background-color: cadetblue;
+  }
+  
+  nav > .nav-section {
+    padding: 1rem 2rem 0 2rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #nav-logo-section,
+  #nav-link-section {
+    flex-basis: calc(100% / 3);
+  }
+  
+  #nav-logo-section {
+    justify-content: flex-start;
+    cursor: pointer;
+    word-spacing: 5px !important;
+  }
+  
+  #nav-logo-section {
+    font-size: 2.5rem;
+  }
+  
+  #nav-link-section {
+    gap: 6rem
+  }
+  
+  #nav-social-section,
+  #nav-contact-section {
+    flex-grow: 1;
+  }
+  
+  #nav-social-section {
+    gap: 3rem
+  }
+  
+/* Main */
+main {
+    width: 70%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15%;
+    height: 85vh;
+    background-color: black;
+}
