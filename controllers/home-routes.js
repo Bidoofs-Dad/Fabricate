@@ -102,5 +102,59 @@ router.get('/race', withAuth, async (req, res) => {
     }
   });
 
+  //Renders Stats Page
+  router.get('/stats', withAuth, async (req, res) => {
+    try {
+      const userData = await User.findAll({
+        attributes: { exclude: ['password', 'email'] },
+      });
+  
+      const users = userData.map((project) => project.get({ plain: true }));
+  
+      res.render('stats', {
+        users,
+        logged_in: req.session.logged_in,
+      });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
+
+
+  //Renders Background page
+  router.get('/background', withAuth, async (req, res) => {
+    try {
+      const userData = await User.findAll({
+        attributes: { exclude: ['password', 'email'] },
+      });
+  
+      const users = userData.map((project) => project.get({ plain: true }));
+  
+      res.render('background', {
+        users,
+        logged_in: req.session.logged_in,
+      });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
+
+  router.get('/charactersheet', withAuth, async (req, res) => {
+    try {
+      const userData = await User.findAll({
+        attributes: { exclude: ['password', 'email'] },
+      });
+  
+      const users = userData.map((project) => project.get({ plain: true }));
+  
+      res.render('charactersheet', {
+        users,
+        logged_in: req.session.logged_in,
+      });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
+
 
 module.exports = router;
