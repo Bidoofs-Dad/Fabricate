@@ -30,6 +30,7 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+//Renders Race Page
 router.get('/race', withAuth, async (req, res) => {
     try {
       const userData = await User.findAll({
@@ -46,5 +47,58 @@ router.get('/race', withAuth, async (req, res) => {
       res.status(500).json(err);
     }
   });
+
+
+  router.get('/class', withAuth, async (req, res) => {
+    try {
+      const userData = await User.findAll({
+        attributes: { exclude: ['password', 'email'] },
+      });
+  
+      const users = userData.map((project) => project.get({ plain: true }));
+  
+      res.render('class', {
+        users,
+        logged_in: req.session.logged_in,
+      });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
+
+  router.get('/npc', withAuth, async (req, res) => {
+    try {
+      const userData = await User.findAll({
+        attributes: { exclude: ['password', 'email'] },
+      });
+  
+      const users = userData.map((project) => project.get({ plain: true }));
+  
+      res.render('npc', {
+        users,
+        logged_in: req.session.logged_in,
+      });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
+
+  router.get('/pc', withAuth, async (req, res) => {
+    try {
+      const userData = await User.findAll({
+        attributes: { exclude: ['password', 'email'] },
+      });
+  
+      const users = userData.map((project) => project.get({ plain: true }));
+  
+      res.render('pc', {
+        users,
+        logged_in: req.session.logged_in,
+      });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
+
 
 module.exports = router;
