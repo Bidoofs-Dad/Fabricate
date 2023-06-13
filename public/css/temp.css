@@ -1,5 +1,7 @@
 /* General */
 :root {
+    --darker-green: #6b705c;
+    --mid-dark-green: #a5a58d;
     --dark-green: #ccd5ae;
     --light-green: #e9edc9;
     --dark-tan: #d4a373;
@@ -18,7 +20,7 @@
   h1, h2, h3, a, p, span {
     font-family: "Rubik", sans-serif;
     font-weight: 400;
-    color: var(--light-tan);
+    color: white;
     margin: 0px;
   }
 
@@ -64,13 +66,24 @@
   }
   
   #nav-social-section,
-  #nav-contact-section {
+  #nav-login-section {
     flex-grow: 1;
   }
   
   #nav-social-section {
     gap: 3rem
   }
+
+  .logon-button {
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: var(--darker-green);
+  }
+
+  .logon-button:hover {
+    background-color: var(--mid-dark-green);
+  }
+
 
 /* Main */
 main {
@@ -91,5 +104,4 @@ footer {
     gap: 1rem;
     align-items: center;
     justify-content: center;
-
 }
