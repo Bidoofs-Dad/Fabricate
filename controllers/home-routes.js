@@ -48,7 +48,7 @@ router.get('/race', withAuth, async (req, res) => {
     }
   });
 
-
+//Renders Class Page
   router.get('/class', withAuth, async (req, res) => {
     try {
       const userData = await User.findAll({
@@ -66,6 +66,7 @@ router.get('/race', withAuth, async (req, res) => {
     }
   });
 
+//Renders npc Page
   router.get('/npc', withAuth, async (req, res) => {
     try {
       const userData = await User.findAll({
@@ -83,6 +84,7 @@ router.get('/race', withAuth, async (req, res) => {
     }
   });
 
+  //Renders pc Page
   router.get('/pc', withAuth, async (req, res) => {
     try {
       const userData = await User.findAll({
