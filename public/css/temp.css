@@ -1,28 +1,44 @@
 /* General */
 :root {
-    --g1: rgb(98, 0, 234);
-    --g2: rgb(236, 64, 122);
-  
-    --border-color: rgb(15, 15, 15);
+    --dark-green: #ccd5ae;
+    --light-green: #e9edc9;
+    --dark-tan: #d4a373;
+    --mid-tan: #faedcd;
+    --light-tan: #fefae0;
   }
   
   body {
-    background-size: 200%;
     height: 100vh;
-    overflow: hidden;
     margin: 0px;
+    background-image: url('/public/images/paintings\,-cityscapes\,-buildings\,-artwork\,-medieval-.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  h1, h2, h3, a, p, span {
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    color: var(--light-tan);
+    margin: 0px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--dark-green);
   }
   
 /* Nav */
-
   nav {
     display: flex;
     width: 100%;
-    background-color: cadetblue;
+    background-color:black;
   }
   
   nav > .nav-section {
-    padding: 1rem 2rem 0 2rem;
+    padding: 1rem 2rem;
     display: flex;
     gap: 1rem;
     align-items: center;
@@ -37,7 +53,6 @@
   #nav-logo-section {
     justify-content: flex-start;
     cursor: pointer;
-    word-spacing: 5px !important;
   }
   
   #nav-logo-section {
@@ -56,13 +71,25 @@
   #nav-social-section {
     gap: 3rem
   }
-  
+
 /* Main */
 main {
-    width: 70%;
+    width: 80%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15%;
-    height: 85vh;
+    padding: 0 20%;
+    height: 100vh;
+    background-color: #faedcd;
+}
+
+footer {
+    display: flex;
+    width: 100%;
     background-color: black;
+    padding: 1rem 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+
 }
