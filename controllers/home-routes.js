@@ -5,16 +5,13 @@ const withAuth = require('../utils/auth');
 //Renders Homepage
 router.get('/', async (req, res) => {
   try {
-    const userData = await User.findAll({
-      attributes: { exclude: ['password', 'email'] },
-    });
+    // const userData = await User.findAll({
+    //   attributes: { exclude: ['password', 'email'] },
+    // });
 
-    const users = userData.map((project) => project.get({ plain: true }));
+    // const users = userData.map((project) => project.get({ plain: true }));
 
-    res.render('homepage', {
-      users,
-      logged_in: req.session.logged_in,
-    });
+    res.render('homepage');
   } catch (err) {
     res.status(500).json(err);
   }
