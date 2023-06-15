@@ -13,6 +13,8 @@ const loginForm = async (event) => {
     });
     if (!response.ok) {
       alert('Log in failed');
+    } else{
+      window.location.href='/';
     }
   }
 };

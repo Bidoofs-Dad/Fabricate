@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
     // });
 
     // const users = userData.map((project) => project.get({ plain: true }));
-
+console.log(req.session.logged_in);
     res.render('homepage', {logged_in: req.session.logged_in});
   } catch (err) {
     res.status(500).json(err);
@@ -35,7 +35,7 @@ router.get('/race', withAuth, async (req, res) => {
       });
   
       const users = userData.map((project) => project.get({ plain: true }));
-  
+  console.log(req.session);
       res.render('race', {
         users,
         logged_in: req.session.logged_in,
