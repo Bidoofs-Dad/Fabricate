@@ -212,6 +212,40 @@ main {
   transition: 1s;
   transition-delay: 0.75s;
 }
+
+.race-button {
+  border: solid black 3px;
+  border-radius: 5px;
+  background-color: var(--mid-dark-green);
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.race-button:hover {
+  background-color:var(--darker-green);
+}
+
+.subrace-button{
+  border: solid black 3px;
+  border-radius: 5px;
+  background-color: var(--mid-dark-green);
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.subrace-button:hover {
+  background-color:var(--darker-green);
+}
+
+.race-det{
+  font-size: 18px;
+}
+
+.hide{
+  display: none;
+}
+
+
 /* FOOTER */
 footer {
   display: flex;
