@@ -15,6 +15,15 @@
     <title>Fabricate</title>
 </head>
 
+<script>
+  window.addEventListener('scroll', function() {
+  var scrollPosition = window.pageYOffset;
+  var body = document.body;
+  body.style.setProperty('--scroll-position', scrollPosition);
+  body.classList.add('scroll-effect');
+});
+</script>
+
 <body>
   <header>
     <nav>
@@ -23,10 +32,8 @@
       </div>
 
       <div class="nav-section" id="nav-link-section">
-        <a href="#">PAGE 1</a>
-        <a href="#">PAGE 2</a>
-        <a href="#">PAGE 3</a>
-        <a href="#">PAGE 4</a>
+        <a href="#">LINK 1</a>
+        <a href="#">LINK 2</a>
       </div>
 
       <div class="nav-section" id="nav-social-section">
@@ -47,7 +54,11 @@
       </div>
 
       {{#if logged_in}}
-      <button class="btn" id="logout">logout</button>
+        <div class="logon-button" id="logout">
+          <a href="/login" target="_blank">
+            Log In
+          </a>
+        </div>
       {{/if}} 
 
     </nav>
