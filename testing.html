@@ -5,22 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="./public/css/temp.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Eagle+Lake&family=MedievalSharp&display=swap" rel="stylesheet">
       <script src="https://kit.fontawesome.com/7683696611.js" crossorigin="anonymous"></script>
     <title>Fabricate</title>
 </head>
+
+<script>
+  window.addEventListener('scroll', function() {
+  var scrollPosition = window.pageYOffset;
+  var body = document.body;
+  body.style.setProperty('--scroll-position', scrollPosition);
+  body.classList.add('scroll-effect');
+});
+</script>
 
 <body>
   <header>
     <nav>
       <div class= "nav-section" id="nav-logo-section">
-        <h1>FABRICATE LOGO</h1> 
+        <h1>FABRICATE</h1> 
       </div>
 
       <div class="nav-section" id="nav-link-section">
-        <a href="#">PAGE 1</a>
-        <a href="#">PAGE 2</a>
-        <a href="#">PAGE 3</a>
-        <a href="#">PAGE 4</a>
+        <a href="#">LINK 1</a>
+        <a href="#">LINK 2</a>
       </div>
 
       <div class="nav-section" id="nav-social-section">
@@ -41,7 +51,20 @@
   </header>
 
   <main>
-
+    <img class="home-img" src="/public/images/characters.png" alt="" width="800">
+    <div class="content">
+      <p class="body-txt">
+        Welcome to the enchanting realm of Fabricate, a D&D Character Creator, where your imagination takes the lead and heroic adventures await! Our whimsical website is designed to empower aspiring adventurers like you to bring your unique characters to life. Whether you're a seasoned dungeon delver or a first-time explorer, our intuitive tools and vast array of customization options will guide you through the magical process of crafting your very own Dungeons & Dragons heroes. Unleash your creativity as you choose race, class, abilities, and gear, and watch your character spring to life before your eyes. So grab your dice, sharpen your pencils, and embark on a wondrous journey of character creation that's as fun as it is limitless. Adventure awaits, dear traveler!
+      </p>
+    </div>
+    <a href="#" class="start-button">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      START
+    </a>
+    
   </main>
 
   <footer>
