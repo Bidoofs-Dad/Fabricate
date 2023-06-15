@@ -104,7 +104,7 @@ main {
   align-items: center;
   justify-content: center;
   background-color: var(--mid-tan);
-  background-image: url(/public/images/parchment.jpg);
+  background-image: url(/images/parchment.jpg);
 }
 
 .home-img {
