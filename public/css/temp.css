@@ -118,7 +118,7 @@
 
 body {
   margin: 0;
-  background-image: url('/public/images/paintings\,-cityscapes\,-buildings\,-artwork\,-medieval-.jpg');
+  background-image: url('../images/street.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
