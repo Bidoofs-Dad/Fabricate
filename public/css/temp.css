@@ -245,6 +245,10 @@ main {
   display: none;
 }
 
+.stats-cards p{
+  color: black;
+}
+
 
 /* FOOTER */
 footer {
