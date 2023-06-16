@@ -1,4 +1,4 @@
-<div id="characterName"></div>
+{{!-- <div id="characterName"></div>
 <div id="class"></div>
 <div id="race"></div>
 <div id="alignment"></div>
@@ -49,5 +49,254 @@
 <div id="spellAttack"></div>
 <div id="passivePer"></div>
 <div id="combat"></div>
-<div id="langauges"></div>
+<div id="langauges"></div> --}}
 
+  <div class="container">
+    <h1>D&D Character Sheet</h1>
+    
+    <div class="character-info">
+      <h2 class="section-title">Personal Information</h2>
+      <div class="field">
+        <label for="character-name">Character Name:</label>
+        <input type="text" id="character-name" />
+      </div>
+      <div class="field">
+        <label for="player-name">Player Name:</label>
+        <input type="text" id="player-name" />
+      </div>
+      <div class="field">
+        <label for="race">Race:</label>
+        <input type="text" id="character-race" />
+      </div>
+      <div class="field">
+        <label for="class">Class:</label>
+        <input type="text" id="character-class" />
+      </div>
+      <div class="field">
+        <label for="background">Background:</label>
+        <input type="text" id="character-background" />
+      </div>
+      <div class="field">
+        <label for="alignment">Alignment:</label>
+        <input type="text" id="character-class" />
+      </div>
+      <div class="field">
+        <label for="proficiency">Proficiency:</label>
+        <input type="number" id="strength" min="1" max="20" />
+      </div>
+      <div class="field">
+        <label for="walking-speed">Walking Speed (ft):</label>
+        <input type="number" id="strength" min="1" max="200" />
+      </div>
+      <div class="field">
+        <label for="armor-class">Armor Class:</label>
+        <input type="number" id="strength" min="1" max="20" />
+      </div>
+      <div class="field">
+        <label for="initiative">Initiative:</label>
+        <input type="number" id="strength" min="1" max="20" />
+      </div>
+      <div class="field">
+        <label for="health">Health:</label>
+        <input type="number" id="strength" min="1" max="200" />
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Attributes</h2>
+      <div class="field">
+        <label for="strength">Strength:</label>
+        <input type="number" id="strength" min="1" max="20" />
+      </div>
+      <div class="field">
+        <label for="dexterity">Dexterity:</label>
+        <input type="number" id="dexterity" min="1" max="20" />
+      </div>
+      <div class="field">
+        <label for="constitution">Constitution:</label>
+        <input type="number" id="constitution" min="1" max="20" />
+      </div>
+      <div class="field">
+        <label for="intelligence">Intelligence:</label>
+        <input type="number" id="intelligence" min="1" max="20" />
+      </div>
+      <div class="field">
+        <label for="wisdom">Wisdom:</label>
+        <input type="number" id="wisdom" min="1" max="20" />
+      </div>
+      <div class="field">
+        <label for="charisma">Charisma:</label>
+        <input type="number" id="charisma" min="1" max="20" />
+      </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Saving Throws</h2>
+        <div class="field">
+          <label for="strength">Strength:</label>
+          <input type="number" id="strength" min="1" max="20" />
+          <label for="strength-proficiency">Proficient:</label>
+          <input type="checkbox" id="strength-proficiency" />
+        </div>
+        <div class="field">
+          <label for="dexterity">Dexterity:</label>
+          <input type="number" id="dexterity" min="1" max="20" />
+          <label for="dexterity-proficiency">Proficient:</label>
+          <input type="checkbox" id="dexterity-proficiency" />
+        </div>
+        <div class="field">
+          <label for="constitution">Constitution:</label>
+          <input type="number" id="constitution" min="1" max="20" />
+          <label for="stealth-proficiency">Proficient:</label>
+          <input type="checkbox" id="constitution-proficiency" />
+        </div>
+        <div class="field">
+          <label for="intelligence">Intelligence:</label>
+          <input type="number" id="intelligence" min="1" max="20" />
+          <label for="intelligence-proficiency">Proficient:</label>
+          <input type="checkbox" id="intelligence-proficiency" />
+        </div>
+        <div class="field">
+          <label for="wisdom">Wisdom:</label>
+          <input type="number" id="wisdom" min="1" max="20" />
+          <label for="wisdom-proficiency">Proficient:</label>
+          <input type="checkbox" id="wisdom-proficiency" />
+        </div>
+        <div class="field">
+          <label for="charisma">Charisma:</label>
+          <input type="number" id="charisma" min="1" max="20" />
+          <label for="charisma-proficiency">Proficient:</label>
+          <input type="checkbox" id="charisma-proficiency" />
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">Senses</h2>
+        <div class="field">
+          <label for="passive-wisdom">Passive Wisdom (Perception):</label>
+          <input type="number" id="strength" min="1" max="20" />
+        </div>
+        <div class="field">
+          <label for="passive-intelligence">Passive Intelligence (Investigation):</label>
+          <input type="number" id="dexterity" min="1" max="20" />
+        </div>
+        <div class="field">
+          <label for="passive-wisdom2">Passive Wisdom (Insight):</label>
+          <input type="number" id="constitution" min="1" max="20" />
+        </div>
+      </div>
+  
+    <div class="section">
+        <h2 class="section-title">Skills</h2>
+        <div class="field">
+          <label for="acrobatics">Acrobatics:</label>
+          <input type="number" id="acrobatics" min="0" max="20" />
+          <label for="acrobatics-proficiency">Proficient:</label>
+          <input type="checkbox" id="acrobatics-proficiency" />
+        </div>
+        <div class="field">
+          <label for="animal-handling:">Animal Handling:</label>
+          <input type="number" id="animal-handling" min="0" max="20" />
+          <label for="animal-handling-proficiency">Proficient:</label>
+          <input type="checkbox" id="animal-handling-proficiency" />
+        </div>
+        <div class="field">
+          <label for="arcana">Arcana:</label>
+          <input type="number" id="arcana" min="0" max="20" />
+          <label for="arcana-proficiency">Proficient:</label>
+          <input type="checkbox" id="arcana-proficiency" />
+        </div>
+        <div class="field">
+            <label for="athletics">Athletics:</label>
+            <input type="number" id="athletics" min="0" max="20" />
+            <label for="athletics-proficiency">Proficient:</label>
+            <input type="checkbox" id="athletics-proficiency" />
+          </div>
+          <div class="field">
+            <label for="deception">Deception:</label>
+            <input type="number" id="deception" min="0" max="20" />
+            <label for="deception-proficiency">Proficient:</label>
+            <input type="checkbox" id="deception-proficiency" />
+          </div>
+          <div class="field">
+            <label for="history">History:</label>
+            <input type="number" id="history" min="0" max="20" />
+            <label for="history-proficiency">Proficient:</label>
+            <input type="checkbox" id="history-proficiency" />
+          </div>
+          <div class="field">
+            <label for="insight">Insight:</label>
+            <input type="number" id="insight" min="0" max="20" />
+            <label for="insight-proficiency">Proficient:</label>
+            <input type="checkbox" id="insight-proficiency" />
+          </div>
+          <div class="field">
+            <label for="intimidation">Intimidation:</label>
+            <input type="number" id="intimidation" min="0" max="20" />
+            <label for="intimidation-proficiency">Proficient:</label>
+            <input type="checkbox" id="intimidation-proficiency" />
+          </div>
+          <div class="field">
+            <label for="investigation">Investigation:</label>
+            <input type="number" id="investigation" min="0" max="20" />
+            <label for="investigation-proficiency">Proficient:</label>
+            <input type="checkbox" id="investigation-proficiency" />
+          </div>
+          <div class="field">
+            <label for="medicine">Medicine:</label>
+            <input type="number" id="medicine" min="0" max="20" />
+            <label for="medicine-proficiency">Proficient:</label>
+            <input type="checkbox" id="medicine-proficiency" />
+          </div>
+          <div class="field">
+            <label for="nature">Nature:</label>
+            <input type="number" id="nature" min="0" max="20" />
+            <label for="nature-proficiency">Proficient:</label>
+            <input type="checkbox" id="nature-proficiency" />
+          </div>
+          <div class="field">
+            <label for="perception">perception:</label>
+            <input type="number" id="perception" min="0" max="20" />
+            <label for="perception-proficiency">Proficient:</label>
+            <input type="checkbox" id="perception-proficiency" />
+          </div>
+          <div class="field">
+            <label for="performance">Performance:</label>
+            <input type="number" id="performance" min="0" max="20" />
+            <label for="performance-proficiency">Proficient:</label>
+            <input type="checkbox" id="performance-proficiency" />
+          </div>
+          <div class="field">
+            <label for="religion">Religion:</label>
+            <input type="number" id="religion" min="0" max="20" />
+            <label for="religion-proficiency">Proficient:</label>
+            <input type="checkbox" id="religion-proficiency" />
+          </div>
+          <div class="field">
+            <label for="sleight-of-hand">Sleight of Hand:</label>
+            <input type="number" id="sleight-of-hand" min="0" max="20" />
+            <label for="sleight-of-hand-proficiency">Proficient:</label>
+            <input type="checkbox" id="sleight-of-hand-proficiency" />
+          </div>
+          <div class="field">
+            <label for="stealth">Stealth:</label>
+            <input type="number" id="stealth" min="0" max="20" />
+            <label for="stealth-proficiency">Proficient:</label>
+            <input type="checkbox" id="stealth-proficiency" />
+          </div>
+          <div class="field">
+            <label for="survival">Survival:</label>
+            <input type="number" id="survival" min="0" max="20" />
+            <label for="survival-proficiency">Proficient:</label>
+            <input type="checkbox" id="survival-proficiency" />
+          </div>
+    </div>
+   <div>
+    <label for="survival-proficiency">Is this an NPC?</label>
+    <input type="checkbox" id="survival-proficiency" />
+  </div>
+    <div class="buttons">
+      <button type="submit">Save</button>
+      <button type="reset">Reset</button>
+    </div>
+  </div>
