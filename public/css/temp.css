@@ -213,7 +213,9 @@ main {
   transition-delay: 0.75s;
 }
 
-.race-button {
+.race-button,
+.bg-button,
+.class-button {
   border: solid black 3px;
   border-radius: 5px;
   background-color: var(--mid-dark-green);
@@ -221,7 +223,9 @@ main {
   cursor: pointer;
 }
 
-.race-button:hover {
+.race-button:hover,
+.bg-button:hover,
+.class-button:hover {
   background-color:var(--darker-green);
 }
 
