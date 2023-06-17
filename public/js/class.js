@@ -10,4 +10,3 @@ classButtons.forEach(function (button) {
         localStorage.setItem('classChoice', classChoice);
     });
 });
-
