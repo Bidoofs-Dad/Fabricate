@@ -4,7 +4,7 @@ const characterData = [
     {
         name: "Miguel",
         race: "Khajit",
-        class: "Bard",
+        characterclass: "Bard",
         background: "Sexy",
         level: 21,
         npc: true,
