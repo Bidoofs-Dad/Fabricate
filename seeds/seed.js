@@ -1,5 +1,5 @@
 const sequelize = require('../config/connection');
-const seedStats = require('./statsData');
+// const seedStats = require('./statsData');
 const seedCharacter = require('./characterData');
 const seedUser = require('./userData');
 
@@ -10,7 +10,7 @@ const seedDatabase = async () => {
 
     await seedCharacter();
 
-    await seedStats();
+    // await seedStats();
   
     process.exit(0);
   };

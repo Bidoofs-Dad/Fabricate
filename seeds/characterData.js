@@ -8,6 +8,13 @@ const characterData = [
         background: "Sexy",
         level: 21,
         npc: true,
+        strength: 16,
+        dexterity: 12,
+        constitution: 14,
+        intelligence: 9,
+        wisdom: 2,
+        charisma: 20,
+        character_id: 1,
         user_id: 1,
     }
 ];
