@@ -3,5 +3,10 @@
 </div>
 
 <div class="list-container">
-    
+    {{#each characters as |character|}}
+    <div class="char-card">
+        <div>{{get.name}} {{get.race}}</div>
+        <div>{{get.class}} {{get.background}}</div>
+    </div>
+    {{/each}}
 </div>
