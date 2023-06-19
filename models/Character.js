@@ -20,7 +20,7 @@ Character.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        class: {
+        characterclass: {
             type: DataTypes.STRING,
             allowNull: false,
         },
@@ -34,6 +34,7 @@ Character.init(
         },
         npc: {
             type: DataTypes.BOOLEAN,
+            defaultValue: true
         },
         user_id: {
             type: DataTypes.INTEGER,

@@ -7,6 +7,7 @@ const constitutionEl = document.getElementById('constitution');
 const intelligenceEl = document.getElementById('intelligence');
 const wisdomEl = document.getElementById('wisdom');
 const charismaEl = document.getElementById('charisma');
+const nameEl = document.getElementById('character-name');
 
 const classChoice = localStorage.getItem('classChoice');
 const raceChoice = localStorage.getItem('raceChoice');
@@ -27,3 +28,30 @@ constitutionEl.value = constitutionVal
 intelligenceEl.value = intelligenceVal
 wisdomEl.value = wisdomVal
 charismaEl.value = charismaVal
+
+const submitCharacter = async () => {
+  const name = nameEl.value.trim();
+  const race = raceEl.value.trim();
+  const characterclass = classEl.value.trim();
+  const background = bgEl.value.trim();
+
+
+
+  if (name && race && characterclass && background) {
+    const response = await fetch('/api/users/characters', {
+      method: 'POST',
+      body: JSON.stringify({ name, race, characterclass, background }),
+      headers: { 'Content-Type': 'application/json' },
+    });
+
+    if (response.ok) {
+      alert('Character Submitted!');
+    } else {
+      alert('Failed to save character </3');
+    }
+  }
+};
+
+document
+  .querySelector('#submit-character')
+  .addEventListener('submit', submitCharacter);
