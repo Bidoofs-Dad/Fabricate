@@ -43,10 +43,10 @@ const submitCharacter = async () => {
 
 
 
-  if (name && race && characterclass && background) {
+  if (name && race && characterclass && background && strength && dexterity && constitution && intelligence && wisdom && charisma) {
     const response = await fetch('/api/users/characters', {
       method: 'POST',
-      body: JSON.stringify({ name, race, characterclass, background }),
+      body: JSON.stringify({ name, race, characterclass, background, strength, dexterity, constitution, intelligence, wisdom, charisma }),
       headers: { 'Content-Type': 'application/json' },
     });
 
@@ -57,19 +57,19 @@ const submitCharacter = async () => {
     }
   }
 
-  if (strength && dexterity && constitution && intelligence && wisdom && charisma) {
-    const response = await fetch('/api/users/characters/stats', {
-      method: 'POST',
-      body: JSON.stringify({ strength, dexterity, constitution, intelligence, wisdom, charisma}),
-      headers: { 'Content-Type': 'application/json' },
-    });
+//   if (strength && dexterity && constitution && intelligence && wisdom && charisma) {
+//     const response = await fetch('/api/users/characters/stats', {
+//       method: 'POST',
+//       body: JSON.stringify({ strength, dexterity, constitution, intelligence, wisdom, charisma}),
+//       headers: { 'Content-Type': 'application/json' },
+//     });
 
-    if (response.ok) {
-      alert('Stats Submitted!');
-    } else {
-      alert('Failed to save stats </3');
-    }
-  }
+//     if (response.ok) {
+//       alert('Stats Submitted!');
+//     } else {
+//       alert('Failed to save stats </3');
+//     }
+//   }
 };
 
 document
