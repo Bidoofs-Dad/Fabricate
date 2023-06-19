@@ -20,12 +20,14 @@ router.post('/', async (req, res) => {
 });
 
 router.post('/characters', async (req, res) => {
+
   try {
     const dbUserData = await Character.create({
       characterclass: req.body.characterclass,
       race: req.body.race,
       background: req.body.background,
-      name: req.body.name
+      name: req.body.name,
+      user_id: req.session.user_id
     });
 
     req.session.save(() => {
