@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Character } = require('../../models');
+const { User, Character, Stats } = require('../../models');
 
 router.post('/', async (req, res) => {
   try {
@@ -28,6 +28,29 @@ router.post('/characters', async (req, res) => {
       background: req.body.background,
       name: req.body.name,
       user_id: req.session.user_id
+    });
+
+    req.session.save(() => {
+      req.session.loggedIn = true;
+
+      res.status(200).json(dbUserData);
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+router.post('/characters/stats', async (req, res) => {
+
+  try {
+    const dbUserData = await Stats.create({
+      strength: req.body.strength,
+      dexterity: req.body.dexterity,
+      constitution: req.body.constitution,
+      intelligence: req.body.intelligence,
+      wisdom: req.body.wisdom,
+      charisma: req.body.charisma
     });
 
     req.session.save(() => {

@@ -34,6 +34,12 @@ const submitCharacter = async () => {
   const race = raceEl.value.trim();
   const characterclass = classEl.value.trim();
   const background = bgEl.value.trim();
+  const strength = strengthEl.value.trim();
+  const dexterity = dexterityEl.value.trim();
+  const constitution = constitutionEl.value.trim();
+  const intelligence = intelligenceEl.value.trim();
+  const wisdom = wisdomEl.value.trim();
+  const charisma = charismaEl.value.trim();
 
 
 
@@ -48,6 +54,20 @@ const submitCharacter = async () => {
       alert('Character Submitted!');
     } else {
       alert('Failed to save character </3');
+    }
+  }
+
+  if (strength && dexterity && constitution && intelligence && wisdom && charisma) {
+    const response = await fetch('/api/users/characters/stats', {
+      method: 'POST',
+      body: JSON.stringify({ strength, dexterity, constitution, intelligence, wisdom, charisma}),
+      headers: { 'Content-Type': 'application/json' },
+    });
+
+    if (response.ok) {
+      alert('Stats Submitted!');
+    } else {
+      alert('Failed to save stats </3');
     }
   }
 };
