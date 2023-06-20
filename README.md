@@ -177,7 +177,7 @@ Paul Tuemler - <a href="mailto:paultuemler@gmail.com"> paultuemler@gmail.com</a>
 
 Project Github: [https://github.com/Bidoofs-Dad/Fabricate](https://github.com/Bidoofs-Dad/Fabricate)
 
-Project Link: [link](Link)
+Project Link: [Fabricate](https://fabricate.herokuapp.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
