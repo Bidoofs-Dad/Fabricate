@@ -19,7 +19,7 @@ const constitutionVal = localStorage.getItem('constitutionVal');
 const intelligenceVal = localStorage.getItem('intelligenceVal');
 const wisdomVal = localStorage.getItem('wisdomVal');
 const charismaVal = localStorage.getItem('charismaVal')
-const nameChoice =  localStorage.getItem('nameChoice')
+const nameChoice = localStorage.getItem('nameChoice')
 
 classEl.value = classChoice
 raceEl.value = raceChoice
@@ -60,20 +60,35 @@ const submitCharacter = async () => {
   }
 
   localStorage.clear();
-//   if (strength && dexterity && constitution && intelligence && wisdom && charisma) {
-//     const response = await fetch('/api/users/characters/stats', {
-//       method: 'POST',
-//       body: JSON.stringify({ strength, dexterity, constitution, intelligence, wisdom, charisma}),
-//       headers: { 'Content-Type': 'application/json' },
-//     });
+  //   if (strength && dexterity && constitution && intelligence && wisdom && charisma) {
+  //     const response = await fetch('/api/users/characters/stats', {
+  //       method: 'POST',
+  //       body: JSON.stringify({ strength, dexterity, constitution, intelligence, wisdom, charisma}),
+  //       headers: { 'Content-Type': 'application/json' },
+  //     });
 
-//     if (response.ok) {
-//       alert('Stats Submitted!');
-//     } else {
-//       alert('Failed to save stats </3');
-//     }
-//   }
+  //     if (response.ok) {
+  //       alert('Stats Submitted!');
+  //     } else {
+  //       alert('Failed to save stats </3');
+  //     }
+  //   }
 };
+
+const resetSheet = async () => {
+  classEl.value = ""
+  raceEl.value = ""
+  bgEl.value = ""
+  strengthEl.value = ""
+  dexterityEl.value = ""
+  constitutionEl.value = ""
+  intelligenceEl.value = ""
+  wisdomEl.value = ""
+  charismaEl.value = ""
+  nameEl.value = ""
+
+  window.scrollTo(0, 0);
+}
 
 document
   .querySelector('#submit-character')
