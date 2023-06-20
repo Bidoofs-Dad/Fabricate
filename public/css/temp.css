@@ -336,9 +336,12 @@ h4, .race-det {
 .deleteButton {
   font-size: 20px;
   border: black 3px solid;
-  background-color: var(--light-tan);
+  background-color: var(--dark-green);
   width: 75px;
   justify-content: end;
+  float: right;
+  padding: 2px;
+
 }
 
 .deleteButton:hover {
