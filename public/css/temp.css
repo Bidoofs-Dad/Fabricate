@@ -267,6 +267,7 @@ main {
 .section-title {
   font-weight: bold;
   margin-bottom: 10px;
+  text-shadow: 2px 2px 4px var(--dark-blue), -2px -2px 4px var(--light-blue);
 }
 
 .field {
