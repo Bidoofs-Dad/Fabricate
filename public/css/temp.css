@@ -243,10 +243,6 @@ main {
   background-color:var(--darker-green);
 }
 
-.race-det{
-  font-size: 18px;
-}
-
 .stats-cards p{
   color: black;
 }
@@ -327,6 +323,13 @@ footer {
 .char-card {
   margin-bottom: 5px;
   padding: 5px;
+}
+
+h4, .race-det {
+  font-size: 18px;
+  font-family: 'MedievalSharp', cursive;
+  font-weight: 400;
+  margin: 0;
 }
 
 /* Media Queries */
