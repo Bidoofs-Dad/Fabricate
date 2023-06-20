@@ -94,7 +94,7 @@ router.get('/race', withAuth, async (req, res) => {
       });
   
       const characterData = await Character.findAll()
-      
+
       const users = userData.map((project) => project.get({ plain: true }));
       const characters = characterData.map((project) => project.get({plain: true}));
   
@@ -179,5 +179,17 @@ router.get('/race', withAuth, async (req, res) => {
     }
   });
 
+  router.delete('/api/users/characters', withAuth, async (req, res) => {
+    try {
+      const characterId = req.body.id;
+      console.log(req.body.id);
+      // Delete the character from the database
+      await Character.destroy({ where: { id: characterId } });
+  
+      res.sendStatus(204); // Send a 204 No Content response to indicate successful deletion
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
 
 module.exports = router;

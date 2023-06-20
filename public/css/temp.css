@@ -332,6 +332,18 @@ h4, .race-det {
   margin: 0;
 }
 
+.deleteButton {
+  font-size: 20px;
+  border: black 3px solid;
+  background-color: var(--light-tan);
+  width: 75px;
+  justify-content: end;
+}
+
+.deleteButton:hover {
+  background-color: rgb(60, 59, 42);
+}
+
 /* Media Queries */
 @media (min-width: 768px) {
   main {

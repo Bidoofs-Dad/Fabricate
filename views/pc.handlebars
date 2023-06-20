@@ -5,9 +5,12 @@
 {{#each characters as |char| }}
     {{#unless npc}}
     <div class="char-card">
-        <div class="subrace-button">Name: {{char.name}} | Race: {{char.race}} <br>
+        <div class="subrace-button" data-character-id="{{char.id}}"> Name: {{char.name}} | Race: {{char.race}} <br>
             <div>Class: {{char.characterclass}} | Background: {{char.background}}</div>
+                <div class="deleteButton">DELETE</div>
         </div>
     </div>
     {{/unless}}
 {{/each}}
+
+<script src="/js/character.js"></script>
