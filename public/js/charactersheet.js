@@ -59,6 +59,7 @@ const submitCharacter = async () => {
     }
   }
 
+  localStorage.clear();
 //   if (strength && dexterity && constitution && intelligence && wisdom && charisma) {
 //     const response = await fetch('/api/users/characters/stats', {
 //       method: 'POST',
