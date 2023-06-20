@@ -1,6 +1,7 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User, Character } = require('../models');
 const withAuth = require('../utils/auth');
+
 
 //Renders Homepage
 router.get('/', async (req, res) => {
@@ -67,14 +68,18 @@ router.get('/race', withAuth, async (req, res) => {
   router.get('/npc', withAuth, async (req, res) => {
     try {
       const userData = await User.findAll({
-        attributes: { exclude: ['password', 'email'] },
+        attributes: { exclude: ['password]'] },
       });
+      const characterData = await Character.findAll()
+      
   
       const users = userData.map((project) => project.get({ plain: true }));
+      const characters = characterData.map((project) => project.get({plain: true}));
   
       res.render('npc', {
         users,
         logged_in: req.session.logged_in,
+        characters,
       });
     } catch (err) {
       res.status(500).json(err);
@@ -88,11 +93,15 @@ router.get('/race', withAuth, async (req, res) => {
         attributes: { exclude: ['password', 'email'] },
       });
   
+      const characterData = await Character.findAll()
+      
       const users = userData.map((project) => project.get({ plain: true }));
+      const characters = characterData.map((project) => project.get({plain: true}));
   
       res.render('pc', {
         users,
         logged_in: req.session.logged_in,
+        characters,
       });
     } catch (err) {
       res.status(500).json(err);
@@ -145,6 +154,23 @@ router.get('/race', withAuth, async (req, res) => {
       const users = userData.map((project) => project.get({ plain: true }));
   
       res.render('charactersheet', {
+        users,
+        logged_in: req.session.logged_in,
+      });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
+
+  router.get('/users', withAuth, async (req, res) => {
+    try {
+      const userData = await User.findAll({
+      
+      });
+  
+      const users = userData.map((project) => project.get({ plain: true }));
+  
+      res.render('users', {
         users,
         logged_in: req.session.logged_in,
       });

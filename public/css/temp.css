@@ -316,6 +316,16 @@ footer {
   padding: 1rem 0;
 }
 
+.list-container {
+  color: black;
+  font-size: 60px;
+  background-color:var(--mid-dark-green);
+  border: solid black 3px;
+  margin-bottom: 20px;
+  width: 400px;
+  text-align: center;
+}
+
 /* Media Queries */
 @media (min-width: 768px) {
   main {

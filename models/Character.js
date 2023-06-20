@@ -34,7 +34,7 @@ Character.init(
         },
         npc: {
             type: DataTypes.BOOLEAN,
-            defaultValue: true
+            defaultValue: false,
         },
         strength: {
             type: DataTypes.INTEGER,

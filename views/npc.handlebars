@@ -1,13 +1,11 @@
-<div>
-    <p>NPC List</p>
-</div>
+<p class="list-container">NPC List</p>
 
-<div class="list-container">
-    {{#each characters as |character|}}
+{{#each characters as |char| }}
+    {{#if npc}}
     <div class="char-card">
-        <div>{{get.name}} {{get.race}}</div>
-        <div>{{get.class}} {{get.background}}</div>
+        <div class="subrace-button">Name: {{char.name}} | Race: {{char.race}} <br>
+            <div>Class: {{char.characterclass}} | Background: {{char.background}}</div>
+        </div>
     </div>
-    {{/each}}
-</div>
-</div>
+    {{/if}}
+{{/each}}

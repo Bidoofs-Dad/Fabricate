@@ -7,7 +7,7 @@ const characterData = [
         characterclass: "Bard",
         background: "Sexy",
         level: 21,
-        npc: true,
+        npc: false,
         strength: 16,
         dexterity: 12,
         constitution: 14,
