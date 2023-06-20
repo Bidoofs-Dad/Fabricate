@@ -8,6 +8,7 @@ const intelligenceEl = document.getElementById('intelligence');
 const wisdomEl = document.getElementById('wisdom');
 const charismaEl = document.getElementById('charisma');
 const nameEl = document.getElementById('character-name');
+const npcEl = document.getElementById('npc');
 
 const classChoice = localStorage.getItem('classChoice');
 const raceChoice = localStorage.getItem('raceChoice');
@@ -17,7 +18,7 @@ const dexterityVal = localStorage.getItem('dexterityVal');
 const constitutionVal = localStorage.getItem('constitutionVal');
 const intelligenceVal = localStorage.getItem('intelligenceVal');
 const wisdomVal = localStorage.getItem('wisdomVal');
-const charismaVal = localStorage.getItem('charismaVal');
+const charismaVal = localStorage.getItem('charismaVal') 
 
 classEl.value = classChoice
 raceEl.value = raceChoice
@@ -40,13 +41,12 @@ const submitCharacter = async () => {
   const intelligence = intelligenceEl.value.trim();
   const wisdom = wisdomEl.value.trim();
   const charisma = charismaEl.value.trim();
-
-
+  const npc = npcEl.value
 
   if (name && race && characterclass && background && strength && dexterity && constitution && intelligence && wisdom && charisma) {
     const response = await fetch('/api/users/characters', {
       method: 'POST',
-      body: JSON.stringify({ name, race, characterclass, background, strength, dexterity, constitution, intelligence, wisdom, charisma }),
+      body: JSON.stringify({ name, race, characterclass, background, npc, strength, dexterity, constitution, intelligence, wisdom, charisma }),
       headers: { 'Content-Type': 'application/json' },
     });
 
