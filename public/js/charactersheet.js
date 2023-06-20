@@ -18,7 +18,8 @@ const dexterityVal = localStorage.getItem('dexterityVal');
 const constitutionVal = localStorage.getItem('constitutionVal');
 const intelligenceVal = localStorage.getItem('intelligenceVal');
 const wisdomVal = localStorage.getItem('wisdomVal');
-const charismaVal = localStorage.getItem('charismaVal') 
+const charismaVal = localStorage.getItem('charismaVal')
+const nameChoice =  localStorage.getItem('nameChoice')
 
 classEl.value = classChoice
 raceEl.value = raceChoice
@@ -29,6 +30,7 @@ constitutionEl.value = constitutionVal
 intelligenceEl.value = intelligenceVal
 wisdomEl.value = wisdomVal
 charismaEl.value = charismaVal
+nameEl.value = nameChoice
 
 const submitCharacter = async () => {
   const name = nameEl.value.trim();
