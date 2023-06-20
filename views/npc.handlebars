@@ -4,8 +4,10 @@
     {{#if npc}}
     <div class="char-card">
         <div class="subrace-button" data-character-id="{{char.id}}">Name: {{char.name}} | Race: {{char.race}} <br>
-            <div>Class: {{char.characterclass}} | Background: {{char.background}}</div>
-                <div class="deleteButton">DELETE</div>
+            <div>Class: {{char.characterclass}} | Background: {{char.background}}</div> <br>
+            <div style="text-align: center;">STR: {{char.strength}} | DEX: {{char.dexterity}} | CON: {{char.constitution}} <br>
+                 INT: {{char.intelligence}} | WIS: {{char.wisdom}} | CHA: {{char.charisma}}</div> <br>
+                <div class="deleteButton" style="margin: 0 auto">DELETE</div>
         </div>
     </div>
     {{/if}}
