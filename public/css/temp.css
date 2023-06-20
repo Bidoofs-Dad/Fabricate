@@ -221,6 +221,7 @@ main {
   background-color: var(--mid-dark-green);
   font-size: 25px;
   cursor: pointer;
+  padding: 5px;
 }
 
 .race-button:hover,
@@ -235,6 +236,7 @@ main {
   background-color: var(--mid-dark-green);
   font-size: 25px;
   cursor: pointer;
+  padding: 5px;
 }
 
 .subrace-button:hover {
@@ -324,6 +326,11 @@ footer {
   margin-bottom: 20px;
   width: 400px;
   text-align: center;
+}
+
+.char-card {
+  margin-bottom: 5px;
+  padding: 5px;
 }
 
 /* Media Queries */
