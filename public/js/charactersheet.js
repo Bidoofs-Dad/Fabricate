@@ -54,10 +54,13 @@ const submitCharacter = async () => {
 
     if (response.ok) {
       alert('Character Submitted!');
+      location.replace("/")
     } else {
       alert('Failed to save character </3');
     }
   }
+
+  
 
   localStorage.clear();
   //   if (strength && dexterity && constitution && intelligence && wisdom && charisma) {
