@@ -214,7 +214,7 @@ main {
   transition: 1s;
   transition-delay: 0.75s;
 }
-/* RACE PAGE */
+/* RACE PAGE & CLASS */
 .race-top {
   margin: 2rem;
   text-align: center;
@@ -243,12 +243,14 @@ main {
   background-color:var(--darker-green);
 }
 
-.race-button p{
+.race-button,
+.class-button p{
   color: white !important;
   font-size: 20px;
 }
 
-.race-button h1{
+.race-button, 
+.class-button h1{
   font-size: 24px !important;
 }
 
@@ -293,6 +295,20 @@ main {
 .stats-cards p{
   color: black;
 }
+
+.class-button {
+  display: flex;
+  align-items: center;
+}
+
+.class-content {
+  flex: 1;
+}
+
+.class-img {
+  margin-left: 1rem;
+}
+
 /* CHARACTER SHEET */
 .container {
   max-width: 600px;
