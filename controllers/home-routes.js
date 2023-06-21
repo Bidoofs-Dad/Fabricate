@@ -67,17 +67,13 @@ router.get('/race', withAuth, async (req, res) => {
 //Renders npc Page
   router.get('/npc', withAuth, async (req, res) => {
     try {
-      const userData = await User.findAll({
-        attributes: { exclude: ['password]'] },
+      const characterData = await Character.findAll({
+        where: { user_id: req.session.user_id },
       });
-      const characterData = await Character.findAll()
-      
   
-      const users = userData.map((project) => project.get({ plain: true }));
       const characters = characterData.map((project) => project.get({plain: true}));
   
       res.render('npc', {
-        users,
         logged_in: req.session.logged_in,
         characters,
       });
@@ -89,17 +85,13 @@ router.get('/race', withAuth, async (req, res) => {
   //Renders pc Page
   router.get('/pc', withAuth, async (req, res) => {
     try {
-      const userData = await User.findAll({
-        attributes: { exclude: ['password', 'email'] },
+      const characterData = await Character.findAll({
+        where: { user_id: req.session.user_id },
       });
-  
-      const characterData = await Character.findAll()
 
-      const users = userData.map((project) => project.get({ plain: true }));
       const characters = characterData.map((project) => project.get({plain: true}));
   
       res.render('pc', {
-        users,
         logged_in: req.session.logged_in,
         characters,
       });
