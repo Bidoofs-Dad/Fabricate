@@ -3,7 +3,7 @@ const classButtons = document.querySelectorAll('.class-button');
 classButtons.forEach(function (button) {
     button.addEventListener('click', function () {
 
-        const classChoice = button.querySelector('p').textContent;
+        const classChoice = button.querySelector('h1').textContent;
         
         console.log(classChoice); 
 
