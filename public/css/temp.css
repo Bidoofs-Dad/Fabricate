@@ -212,7 +212,7 @@ main {
   transition: 1s;
   transition-delay: 0.75s;
 }
-
+/* RACE BUTTONS */
 .race-button,
 .bg-button,
 .class-button {
@@ -222,12 +222,28 @@ main {
   font-size: 25px;
   cursor: pointer;
   padding: 5px;
+  margin: 1rem;
 }
 
 .race-button:hover,
 .bg-button:hover,
 .class-button:hover {
   background-color:var(--darker-green);
+}
+
+.race-button p{
+  color: white !important;
+  font-size: 20px;
+}
+
+.race-button h1{
+  font-size: 24px !important;
+}
+
+.race-type {
+  font-weight: bold;
+  color:white;
+  text-shadow: var(--dark-blue) 5px;
 }
 
 .subrace-button{
@@ -237,6 +253,15 @@ main {
   font-size: 25px;
   cursor: pointer;
   padding: 5px;
+}
+
+.subrace-button p{
+  color: white !important;
+  font-size: 20px;
+}
+
+.subrace-button h1{
+  font-size: 24px !important;
 }
 
 .subrace-button:hover {
