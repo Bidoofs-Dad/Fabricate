@@ -14,10 +14,8 @@
 body {
   margin: 0;
   background-image: url('../images/street.jpg');
-  /* background-repeat: no-repeat;
-  background-size: cover; */
-  background-repeat:inherit;
-  background-size:contain;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .scroll-effect {
