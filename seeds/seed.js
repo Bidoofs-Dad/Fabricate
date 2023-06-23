@@ -11,6 +11,8 @@ const seedDatabase = async () => {
 
     await seedRace();
 
+    await seedClass();
+
     await seedCharacter();
 
     process.exit(0);
