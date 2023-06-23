@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Character } = require('../models');
+const { User, Character, Race } = require('../models');
 const withAuth = require('../utils/auth');
 
 
@@ -34,12 +34,16 @@ router.get('/race', withAuth, async (req, res) => {
       const userData = await User.findAll({
         attributes: { exclude: ['password', 'email'] },
       });
+
+      const raceData = await Race.findAll();
   
       const users = userData.map((project) => project.get({ plain: true }));
+      const races = raceData.map((project) => project.get({ plain: true }));
   console.log(req.session);
       res.render('race', {
         users,
         logged_in: req.session.logged_in,
+        races,
       });
     } catch (err) {
       res.status(500).json(err);

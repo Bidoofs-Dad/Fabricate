@@ -11,11 +11,11 @@ Race.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        name: {
+        race: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        details: {
+        description: {
             type: DataTypes.STRING,
             allowNull: false,
         },
