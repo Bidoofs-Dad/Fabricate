@@ -1,5 +1,6 @@
 const User = require("./User");
 const Character = require("./Character");
+const Race = require("./Race");
 // const Stats = require("./Stats");
 
 User.hasMany(Character, {
@@ -18,4 +19,4 @@ Character.belongsTo(User, {
 //     foreignKey: "character_id",
 // })
 
-module.exports = { User, Character };
+module.exports = { User, Character, Race };
