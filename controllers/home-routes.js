@@ -28,6 +28,15 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+router.get('/signup', (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect('/');
+    return;
+  }
+
+  res.render('signup');
+});
+
 //Renders Race Page
 router.get('/race', withAuth, async (req, res) => {
     try {
