@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Character, Race, Monster } = require('../models');
+const { User, Character, Race, Class, Monster } = require('../models');
 const withAuth = require('../utils/auth');
 
 
@@ -60,22 +60,26 @@ router.get('/race', withAuth, async (req, res) => {
   });
 
 //Renders Class Page
-  router.get('/class', withAuth, async (req, res) => {
-    try {
-      const userData = await User.findAll({
-        attributes: { exclude: ['password', 'email'] },
-      });
-  
-      const users = userData.map((project) => project.get({ plain: true }));
-  
-      res.render('class', {
-        users,
-        logged_in: req.session.logged_in,
-      });
-    } catch (err) {
-      res.status(500).json(err);
-    }
-  });
+router.get('/class', withAuth, async (req, res) => {
+  try {
+    const userData = await User.findAll({
+      attributes: { exclude: ['password', 'email'] },
+    });
+
+    const classData = await Class.findAll();
+
+    const users = userData.map((project) => project.get({ plain: true }));
+    const classes = classData.map((project) => project.get({ plain: true }));
+    console.log(req.session);
+    res.render('class', {
+      users,
+      logged_in: req.session.logged_in,
+      classes,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 //Renders npc Page
   router.get('/npc', withAuth, async (req, res) => {
