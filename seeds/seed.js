@@ -3,6 +3,7 @@ const sequelize = require('../config/connection');
 const seedCharacter = require('./characterData');
 const seedUser = require('./userData');
 const seedRace = require('./raceData');
+const seedClass = require('./classData');
 
 const seedDatabase = async () => {
     await sequelize.sync({ force: true });
