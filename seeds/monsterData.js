@@ -4,6 +4,7 @@ const monsterData = [
     {
         name: "Zane",
         beastType: "Humanoid",
+        size: "Tiny",
         challengeRating: "1/2",
         alignment: "Chaotic Neutral"
     },

@@ -72,6 +72,7 @@ router.post('/monsters', async (req, res) => {
     const dbUserData = await Monster.create({
       name: req.body.name,
       beastType: req.body.beastType,
+      size: req.body.size,
       challengeRating: req.body.challengeRating,
       alignment: req.body.alignment,
     });

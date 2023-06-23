@@ -20,6 +20,10 @@ Monster.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
+        size: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
         challengeRating: {
             type: DataTypes.STRING,
             allowNull: false,
