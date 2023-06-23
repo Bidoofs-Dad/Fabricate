@@ -163,23 +163,6 @@ router.get('/race', withAuth, async (req, res) => {
     }
   });
 
-  router.get('/users', withAuth, async (req, res) => {
-    try {
-      const userData = await User.findAll({
-      
-      });
-  
-      const users = userData.map((project) => project.get({ plain: true }));
-  
-      res.render('users', {
-        users,
-        logged_in: req.session.logged_in,
-      });
-    } catch (err) {
-      res.status(500).json(err);
-    }
-  });
-
   router.delete('/api/users/characters', withAuth, async (req, res) => {
     try {
       const characterId = req.body.id;
