@@ -4,6 +4,7 @@ const seedCharacter = require('./characterData');
 const seedUser = require('./userData');
 const seedRace = require('./raceData');
 const seedMonster = require('./monsterData');
+const seedMonster2 = require('./monsterData2');
 
 const seedDatabase = async () => {
     await sequelize.sync({ force: true });
@@ -13,6 +14,8 @@ const seedDatabase = async () => {
     await seedRace();
 
     await seedMonster();
+
+    await seedMonster2();
 
     await seedCharacter();
 
