@@ -4,6 +4,7 @@ const seedCharacter = require('./characterData');
 const seedUser = require('./userData');
 const seedRace = require('./raceData');
 const seedClass = require('./classData');
+const seedBackground = require('./backgroundData');
 const seedMonster = require('./monsterData');
 
 const seedDatabase = async () => {
@@ -14,6 +15,8 @@ const seedDatabase = async () => {
     await seedRace();
 
     await seedClass();
+
+    await seedBackground();
 
     await seedMonster();
 

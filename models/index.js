@@ -2,6 +2,7 @@ const User = require("./User");
 const Character = require("./Character");
 const Race = require("./Race");
 const Class = require("./Class");
+const Background = require("./Background");
 const Monster = require("./Monster");
 // const Stats = require("./Stats");
 
@@ -21,4 +22,4 @@ Character.belongsTo(User, {
 //     foreignKey: "character_id",
 // })
 
-module.exports = { User, Character, Race, Class, Monster };
+module.exports = { User, Character, Race, Class, Background, Monster };
