@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Character, Race, Class, Monster } = require('../models');
+const { User, Character, Race, Class, Background, Monster } = require('../models');
 const withAuth = require('../utils/auth');
 
 
@@ -70,11 +70,33 @@ router.get('/class', withAuth, async (req, res) => {
 
     const users = userData.map((project) => project.get({ plain: true }));
     const classes = classData.map((project) => project.get({ plain: true }));
-    console.log(req.session);
+    
     res.render('class', {
       users,
       logged_in: req.session.logged_in,
       classes,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+//Renders Background page
+router.get('/background', withAuth, async (req, res) => {
+  try {
+    const userData = await User.findAll({
+      attributes: { exclude: ['password', 'email'] },
+    });
+
+    const bgData = await Background.findAll();
+
+    const users = userData.map((project) => project.get({ plain: true }));
+    const backgrounds = bgData.map((project) => project.get({ plain: true }));
+
+    res.render('background', {
+      users,
+      logged_in: req.session.logged_in,
+      backgrounds,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -127,25 +149,6 @@ router.get('/class', withAuth, async (req, res) => {
       const users = userData.map((project) => project.get({ plain: true }));
   
       res.render('stats', {
-        users,
-        logged_in: req.session.logged_in,
-      });
-    } catch (err) {
-      res.status(500).json(err);
-    }
-  });
-
-
-  //Renders Background page
-  router.get('/background', withAuth, async (req, res) => {
-    try {
-      const userData = await User.findAll({
-        attributes: { exclude: ['password', 'email'] },
-      });
-  
-      const users = userData.map((project) => project.get({ plain: true }));
-  
-      res.render('background', {
         users,
         logged_in: req.session.logged_in,
       });
