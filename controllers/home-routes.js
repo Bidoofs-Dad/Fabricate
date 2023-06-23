@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Character, Race } = require('../models');
+const { User, Character, Race, Monster } = require('../models');
 const withAuth = require('../utils/auth');
 
 
@@ -175,6 +175,29 @@ router.get('/race', withAuth, async (req, res) => {
       await Character.destroy({ where: { id: characterId } });
   
       res.sendStatus(204); // Send a 204 No Content response to indicate successful deletion
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
+
+  router.get('/beastiary', withAuth, async (req, res) => {
+    try {
+      const userData = await User.findAll({
+        attributes: { exclude: ['password', 'email'] },
+      });
+
+      const monsterData = await Monster.findAll();
+  
+      const users = userData.map((project) => project.get({ plain: true }));
+      const monsters = monsterData.map((project) => project.get({ plain: true }));
+  console.log(req.session);
+  console.log("monsters", monsters);
+      res.render('beastiary', {
+        users,
+        logged_in: req.session.logged_in,
+        monsters,
+
+      });
     } catch (err) {
       res.status(500).json(err);
     }
