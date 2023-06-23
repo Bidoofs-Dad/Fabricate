@@ -187,7 +187,7 @@ router.get('/background', withAuth, async (req, res) => {
     }
   });
 
-  router.get('/beastiary', withAuth, async (req, res) => {
+  router.get('/bestiary', withAuth, async (req, res) => {
     try {
       const userData = await User.findAll({
         attributes: { exclude: ['password', 'email'] },
@@ -199,7 +199,7 @@ router.get('/background', withAuth, async (req, res) => {
       const monsters = monsterData.map((project) => project.get({ plain: true }));
   console.log(req.session);
   console.log("monsters", monsters);
-      res.render('beastiary', {
+      res.render('bestiary', {
         users,
         logged_in: req.session.logged_in,
         monsters,

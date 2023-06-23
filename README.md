@@ -116,7 +116,7 @@ If you wish to install and customize yourself follow this process
 ## Usage
 
 
-At the moment you are only able to create characters and save them as npc's or pc's. We are hoping to add a spell book, beastiary, and leveling characters in the future.
+At the moment you are only able to create characters and save them as npc's or pc's. We are hoping to add a spell book, bestiary, and leveling characters in the future.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -126,7 +126,7 @@ At the moment you are only able to create characters and save them as npc's or p
 ## Roadmap
 
 - [x] Add Character Saving
-- [ ] Add Beastiary 
+- [x] Add Bestiary 
 - [ ] Add Spellbook
 - [ ] Add subclasses and higher level characters
 - [ ] Multi-language Support
