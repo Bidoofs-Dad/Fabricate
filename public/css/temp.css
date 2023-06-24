@@ -294,7 +294,8 @@ h2 {
 }
 
 .race-button,
-.class-button p{
+.class-button p,
+.bg-button{
   color: white !important;
   font-size: 20px;
   width: 1000px;
@@ -319,15 +320,6 @@ h2 {
   cursor: pointer;
   padding: 5px;
   margin: 1rem;
-}
-
-.subrace-button{
-  border: solid black 3px;
-  border-radius: 5px;
-  background-color: var(--mid-dark-green);
-  font-size: 25px;
-  cursor: pointer;
-  padding: 5px;
 }
 
 .subrace-button p{
@@ -460,6 +452,11 @@ h4, .race-det {
 
 .deleteButton:hover {
   background-color: rgb(60, 59, 42);
+}
+
+.monsterText,
+.spellText {
+ font-size: 30px; 
 }
 
 /* Media Queries */
