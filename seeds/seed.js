@@ -7,6 +7,7 @@ const seedClass = require('./classData');
 const seedBackground = require('./backgroundData');
 const seedMonster = require('./monsterData');
 const seedMonster2 = require('./monsterData2');
+const seedSpell = require('./spellData');
 
 const seedDatabase = async () => {
     await sequelize.sync({ force: true });
@@ -22,6 +23,8 @@ const seedDatabase = async () => {
     await seedMonster();
 
     await seedMonster2();
+
+    await seedSpell();
 
     await seedCharacter();
 

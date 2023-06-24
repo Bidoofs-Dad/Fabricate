@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Character, Race, Class, Background, Monster } = require('../models');
+const { User, Character, Race, Class, Background, Monster, Spell } = require('../models');
 const withAuth = require('../utils/auth');
 
 
@@ -197,8 +197,7 @@ router.get('/background', withAuth, async (req, res) => {
   
       const users = userData.map((project) => project.get({ plain: true }));
       const monsters = monsterData.map((project) => project.get({ plain: true }));
-  console.log(req.session);
-  console.log("monsters", monsters);
+
       res.render('bestiary', {
         users,
         logged_in: req.session.logged_in,
@@ -209,5 +208,28 @@ router.get('/background', withAuth, async (req, res) => {
       res.status(500).json(err);
     }
   });
+
+  router.get('/spellbook', withAuth, async (req, res) => {
+    try {
+      const userData = await User.findAll({
+        attributes: { exclude: ['password', 'email'] },
+      });
+
+      const spellData = await Spell.findAll();
+  
+      const users = userData.map((project) => project.get({ plain: true }));
+      const spells = spellData.map((project) => project.get({ plain: true }));
+
+      res.render('spellbook', {
+        users,
+        logged_in: req.session.logged_in,
+        spells,
+
+      });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
+
 
 module.exports = router;

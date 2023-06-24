@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Character, Race, Class, Monster } = require('../../models');
+const { User, Character, Race, Class, Monster, Spell } = require('../../models');
 
 router.post('/', async (req, res) => {
   try {
@@ -95,6 +95,33 @@ router.post('/monsters', async (req, res) => {
       size: req.body.size,
       challengeRating: req.body.challengeRating,
       alignment: req.body.alignment,
+    });
+
+    req.session.save(() => {
+      req.session.loggedIn = true;
+
+      res.status(200).json(dbUserData);
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+router.post('/spells', async (req, res) => {
+
+  try {
+    const dbUserData = await Spell.create({
+      name: req.body.name,
+      school: req.body.school,
+      level: req.body.level,
+      damageType: req.body.damageType,
+      castingTime: req.body.castingTime,
+      duration: req.body.duration,
+      range: req.body.range,
+      components: req.body.components,
+      attackSave: req.body.attackSave,
+      details: req.body.details,
     });
 
     req.session.save(() => {
