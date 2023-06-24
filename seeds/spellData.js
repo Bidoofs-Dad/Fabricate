@@ -510,7 +510,7 @@ const spellData = [
     {
         name: "Absorb Elements",
         school: "Abjuration",
-        level: "1st Level",
+        level: "1st Level Spell",
         damageType: "Multi Elements",
         castingTime: '1 Reaction',
         duration: '1 Round',
@@ -521,7 +521,7 @@ const spellData = [
     {
         name: "Alarm",
         school: "Abjuration",
-        level: "1st Level",
+        level: "1st Level Spell",
         damageType: "Detection",
         castingTime: '1 Minute',
         duration: '8 Hours (Ritual)',
@@ -532,7 +532,7 @@ const spellData = [
     {
         name: "Animal Friendship",
         school: "Enchantment",
-        level: "1st Level",
+        level: "1st Level Spell",
         damageType: "Charm",
         castingTime: '1 Action',
         duration: '24 Hours',
@@ -543,7 +543,7 @@ const spellData = [
     {
         name: "Armor of Agathys",
         school: "Abjuration",
-        level: "1st Level",
+        level: "1st Level Spell",
         damageType: "Cold",
         castingTime: '1 Action',
         duration: '1 Hour',
@@ -554,7 +554,7 @@ const spellData = [
     {
         name: "Arms of Hadar",
         school: "Conjuration",
-        level: "1st Level",
+        level: "1st Level Spell",
         damageType: "Necrotic",
         castingTime: '1 Action',
         duration: 'Instantaneous',
@@ -565,7 +565,7 @@ const spellData = [
     {
         name: "Bane",
         school: "Enchantment",
-        level: "1st Level",
+        level: "1st Level Spell",
         damageType: "Debuff",
         castingTime: '1 Action',
         duration: '1 Minute (Concentration)',
@@ -576,7 +576,7 @@ const spellData = [
     {
         name: "Beast Bond",
         school: "Divination",
-        level: "1st Level",
+        level: "1st Level Spell",
         damageType: "Buff",
         castingTime: '1 Action',
         duration: '10 Minutes (Concentration)',
@@ -587,7 +587,7 @@ const spellData = [
     {
         name: "Bless",
         school: "Enchantment",
-        level: "1st Level",
+        level: "1st Level Spell",
         damageType: "Buff",
         castingTime: '1 Action',
         duration: '1 Minute',
@@ -598,7 +598,7 @@ const spellData = [
     {
         name: "Burning Hands",
         school: "Evocation",
-        level: "1st Level",
+        level: "1st Level Spell",
         damageType: "Fire",
         castingTime: '1 Action',
         duration: 'Instantaneous',
@@ -609,7 +609,7 @@ const spellData = [
     {
         name: "Catapult",
         school: "Transmutation",
-        level: "1st Level",
+        level: "1st Level Spell",
         damageType: "Bludgeoning",
         castingTime: '1 Action',
         duration: 'Instantaneous',
@@ -620,7 +620,7 @@ const spellData = [
     {
         name: "Cause Fear",
         school: "Necromancy",
-        level: "1st Level",
+        level: "1st Level Spell",
         damageType: "Frightened",
         castingTime: '1 Action',
         duration: '1 Minute (Concentration)',
@@ -631,7 +631,7 @@ const spellData = [
     {
         name: "Ceremony",
         school: "Abjuration",
-        level: "1st Level",
+        level: "1st Level Spell",
         damageType: "Buff",
         castingTime: '1 Hour (Ritual)',
         duration: 'Instantaneous',
@@ -642,7 +642,7 @@ const spellData = [
     {
         name: "Chaos Bolt",
         school: "Evocation",
-        level: "1st Level",
+        level: "1st Level Spell",
         damageType: "Multi Element",
         castingTime: '1 Action',
         duration: 'Instantaneous',
@@ -653,7 +653,7 @@ const spellData = [
     {
         name: "Charm Person",
         school: "Enchantment",
-        level: "1st Level",
+        level: "1st Level Spell",
         damageType: "Charmed",
         castingTime: '1 Action',
         duration: '1 Hour',
@@ -664,7 +664,7 @@ const spellData = [
     {
         name: "Chromatic Orb",
         school: "Evocation",
-        level: "1st Level",
+        level: "1st Level Spell",
         damageType: "Multi Element",
         castingTime: '1 Action',
         duration: 'Instantaneous',
@@ -675,7 +675,7 @@ const spellData = [
     {
         name: "Color Spray",
         school: "Illusion",
-        level: "1st Level",
+        level: "1st Level Spell",
         damageType: "Blinded",
         castingTime: '1 Action',
         duration: '1 Round',
@@ -686,7 +686,7 @@ const spellData = [
     {
         name: "Command",
         school: "Enchantment",
-        level: "1st Level",
+        level: "1st Level Spell",
         damageType: "Prone",
         castingTime: '1 Action',
         duration: '1 Round',
@@ -697,7 +697,7 @@ const spellData = [
     {
         name: "Compelled Duel",
         school: "Enchantment",
-        level: "1st Level",
+        level: "1st Level Spell",
         damageType: "Control",
         castingTime: '1 Bonus Action',
         duration: '1 Hour (Concentration)',
@@ -708,7 +708,7 @@ const spellData = [
     {
         name: "Comprehend Languages",
         school: "Divination",
-        level: "1st Level",
+        level: "1st Level Spell",
         damageType: "Social",
         castingTime: '1 Action (Ritual)',
         duration: '1 Hour',
@@ -719,7 +719,7 @@ const spellData = [
     {
         name: "Create or Destroy Water",
         school: "Transmutation",
-        level: "1st Level",
+        level: "1st Level Spell",
         damageType: "Creation",
         castingTime: '1 Action',
         duration: 'Instantaneous',
@@ -730,7 +730,7 @@ const spellData = [
     {
         name: "Cure Wounds",
         school: "Evocation",
-        level: "1st Level",
+        level: "1st Level Spell",
         damageType: "Healing",
         castingTime: '1 Action',
         duration: 'Instantaneous',
@@ -741,7 +741,7 @@ const spellData = [
     {
         name: "Detect Evil and Good",
         school: "Divination",
-        level: "1st Lelel",
+        level: "1st Level Spell",
         damageType: "Detection",
         castingTime: '1 Action',
         duration: '10 Minutes (Concentration)',
@@ -752,7 +752,7 @@ const spellData = [
     {
         name: "Detect Magic",
         school: "Dvination",
-        level: "1st Level",
+        level: "1st Level Spell",
         damageType: "Detection",
         castingTime: '1 Action (Ritual)',
         duration: '10 Minutes (Concentration)',
@@ -763,7 +763,7 @@ const spellData = [
     {
         name: "Detect Posion and Disease",
         school: "Divination",
-        level: "1st Level",
+        level: "1st Level Spell",
         damageType: "Detection",
         castingTime: '1 Action (Ritual)',
         duration: '10 Minutes (Concentration)',
@@ -774,7 +774,7 @@ const spellData = [
     {
         name: "Disguise Self",
         school: "Illusion",
-        level: "1st Level",
+        level: "1st Level Spell",
         damageType: "Shapechanging",
         castingTime: '1 Action',
         duration: '1 Hour',
@@ -785,7 +785,7 @@ const spellData = [
     {
         name: "Dissonant Whispers",
         school: "Enchantment",
-        level: "1st Level",
+        level: "1st Level Spell",
         damageType: "Psychic",
         castingTime: '1 Action',
         duration: 'Instantaneous',
@@ -796,7 +796,7 @@ const spellData = [
     {
         name: "Distort Value",
         school: "Illusion",
-        level: "1st Level",
+        level: "1st Level Spell",
         damageType: "Illusion",
         castingTime: '1 Minutes',
         duration: '8 Hours',
@@ -807,7 +807,7 @@ const spellData = [
     {
         name: "Divine Favor",
         school: "Evocation",
-        level: "1st Level",
+        level: "1st Level Spell",
         damageType: "Radiant",
         castingTime: '1 Bonus Action',
         duration: '1 Minute (Concentration)',
@@ -818,7 +818,7 @@ const spellData = [
     {
         name: "Earth Tremor",
         school: "Evocation",
-        level: "1st Level",
+        level: "1st Level Spell",
         damageType: "Bludgeoning",
         castingTime: '1 Action',
         duration: 'Instantaneous',
@@ -829,7 +829,7 @@ const spellData = [
     {
         name: "Ensnaring Strike",
         school: "Conjuration",
-        level: "1st Level",
+        level: "1st Level Spell",
         damageType: "Piercing",
         castingTime: '1 Bonus Action',
         duration: '1 Minute (Concentration)',
@@ -840,7 +840,7 @@ const spellData = [
     {
         name: "Entangle",
         school: "Conjuration",
-        level: "1st Level",
+        level: "1st Level Spell",
         damageType: "Restrained",
         castingTime: '1 Action',
         duration: '1 Minute (Concentration)',
@@ -851,7 +851,7 @@ const spellData = [
     {
         name: "Expeditous Retreat",
         school: "Transmutation",
-        level: "1st Level",
+        level: "1st Level Spell",
         damageType: "Movement",
         castingTime: '1 Bonus Action',
         duration: '10 Minutes (Concentration)',
@@ -862,7 +862,7 @@ const spellData = [
     {
         name: "Faerie Fire",
         school: "Evocation",
-        level: "1st Level",
+        level: "1st Level Spell",
         damageType: "Debuff",
         castingTime: '1 Action',
         duration: '1 Minute (Concentration)',
@@ -873,7 +873,7 @@ const spellData = [
     {
         name: "False Life",
         school: "Necromancy",
-        level: "1st Level",
+        level: "1st Level Spell",
         damageType: "Buff",
         castingTime: '1 Action',
         duration: '1 Hour',
@@ -884,7 +884,7 @@ const spellData = [
     {
         name: "Feather Fall",
         school: "Transmutation",
-        level: "1st Level",
+        level: "1st Level Spell",
         damageType: "Exploration",
         castingTime: '1 Reaction',
         duration: '1 Minute',
@@ -895,7 +895,7 @@ const spellData = [
     {
         name: "Find Familiar",
         school: "Conjuration",
-        level: "1st Level",
+        level: "1st Level Spell",
         damageType: "Summoning",
         castingTime: '1 Hour (Ritual)',
         duration: 'Instantaneous',
@@ -906,7 +906,7 @@ const spellData = [
     {
         name: "Floating Disk",
         school: "Conjuration",
-        level: "1st Level",
+        level: "1st Level Spell",
         damageType: "Movement",
         castingTime: '1 Action (Ritual)',
         duration: '1 Hour',
@@ -917,7 +917,7 @@ const spellData = [
     {
         name: "Fog Cloud",
         school: "Conjuration",
-        level: "1st Level",
+        level: "1st Level Spell",
         damageType: "Control",
         castingTime: '1 Action',
         duration: '1 Hour (Concentration)',
@@ -928,7 +928,7 @@ const spellData = [
     {
         name: "Frost Fingers",
         school: "Evocation",
-        level: "1st Level",
+        level: "1st Level Spell",
         damageType: "Cold",
         castingTime: '1 Action',
         duration: 'Instantaneous',
@@ -939,7 +939,7 @@ const spellData = [
     {
         name: "Gift of Alacrity",
         school: "Divination",
-        level: "1st Level",
+        level: "1st Level Spell",
         damageType: "Buff",
         castingTime: '1 Minute',
         duration: '8 Hours',
@@ -950,7 +950,7 @@ const spellData = [
     {
         name: "Goodberry",
         school: "Transmutation",
-        level: "1st Level",
+        level: "1st Level Spell",
         damageType: "Healing",
         castingTime: '1 Action',
         duration: 'Instantaneous',
@@ -961,7 +961,7 @@ const spellData = [
     {
         name: "Grease",
         school: "Conjuration",
-        level: "1st Level",
+        level: "1st Level Spell",
         damageType: "Prone",
         castingTime: '1 Action',
         duration: '1 Minute',
