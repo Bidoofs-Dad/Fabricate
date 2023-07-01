@@ -1,20 +1,31 @@
-// const dnd = require('dnd-npc');
-// const npc = new dnd.npc({ raceType: "warforged" })
-//.generate(); // Generates a Warforged with a random sub-race and role.
-
-// const randomEl = document.getElementById("random-button")
-
-// Generates a completely random character.
-
 const randomNpc = async () => {
-    localStorage.setItem('nameChoice', 'Enterprise');
-    localStorage.setItem('raceChoice', 'High Elf');
-    localStorage.setItem('classChoice', 'Artificer');
-    localStorage.setItem('bgChoice', 'Sailor');
-    localStorage.setItem('strengthVal', 7);
-    localStorage.setItem('dexterityVal', 10);
-    localStorage.setItem('constitutionVal', 3);
-    localStorage.setItem('intelligenceVal', 5);
-    localStorage.setItem('wisdomVal', 15);
-    localStorage.setItem('charismaVal', 12);
+  fetch('/api/users/randomnpc')
+    .then(response => response.json())
+    .then(npc => {
+
+      const randomName = npc.character.name;
+      const randomRace = npc.race.name;
+      const randomClass = npc.role.name;
+      const randomBg = npc.character.background;
+      const randomStr = npc.role.stats.strength;
+      const randomDex = npc.role.stats.dexterity;
+      const randomCon = npc.role.stats.constitution;
+      const randomInt = npc.role.stats.intelligence;
+      const randomWis = npc.role.stats.wisdom;
+      const randomCha = npc.role.stats.charisma;
+
+      localStorage.setItem('nameChoice', randomName);
+      localStorage.setItem('raceChoice', randomRace);
+      localStorage.setItem('classChoice', randomClass);
+      localStorage.setItem('bgChoice', randomBg);
+      localStorage.setItem('strengthVal', randomStr);
+      localStorage.setItem('dexterityVal', randomDex);
+      localStorage.setItem('constitutionVal', randomCon);
+      localStorage.setItem('intelligenceVal', randomInt);
+      localStorage.setItem('wisdomVal', randomWis);
+      localStorage.setItem('charismaVal', randomCha);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
 }

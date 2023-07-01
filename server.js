@@ -6,6 +6,8 @@ const routes = require('./controllers');
 const helpers = require('./utils/helpers');
 const bodyParser = require('body-parser');
 
+// const dnd = require('dnd-npc');
+
 const sequelize = require('./config/connection');
 
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -36,6 +38,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 
 app.use(routes);
+
+// app.get('/api/npcrando', (req, res) => {
+//   const npc = new dnd.npc({ raceType: 'warforged' }).generate();
+//   res.json(npc);
+// });
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));

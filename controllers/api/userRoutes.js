@@ -1,5 +1,8 @@
+const dnd = require('dnd-npc');
 const router = require('express').Router();
 const { User, Character, Race, Class, Monster, Spell } = require('../../models');
+
+
 
 router.post('/', async (req, res) => {
   try {
@@ -84,6 +87,12 @@ router.post('/classes', async (req, res) => {
     console.log(err);
     res.status(500).json(err);
   }
+});
+
+router.get('/randomnpc', (req, res) => {
+  const npc = new dnd.npc({ raceType: 'warforged' }).generate();
+  res.json(npc);
+  
 });
 
 router.post('/monsters', async (req, res) => {
