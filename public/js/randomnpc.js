@@ -1,40 +1,31 @@
-// const dnd = require('dnd-npc');
-// const npc = new dnd.npc({ raceType: "warforged" }).generate();
- // Generates a Warforged with a random sub-race and role.
+const randomNpc = async () => {
+  fetch('/api/users/randomnpc')
+    .then(response => response.json())
+    .then(npc => {
 
-// const randomEl = document.getElementById("random-button")
+      const randomName = npc.character.name;
+      const randomRace = npc.race.name;
+      const randomClass = npc.role.name;
+      const randomBg = npc.character.background;
+      const randomStr = npc.role.stats.strength;
+      const randomDex = npc.role.stats.dexterity;
+      const randomCon = npc.role.stats.constitution;
+      const randomInt = npc.role.stats.intelligence;
+      const randomWis = npc.role.stats.wisdom;
+      const randomCha = npc.role.stats.charisma;
 
-// Generates a completely random character.
-
-// const randomNpc = async () => {
-//     localStorage.setItem('nameChoice', npc.character.name);
-//     localStorage.setItem('raceChoice', 'High Elf');
-//     localStorage.setItem('classChoice', 'Artificer');
-//     localStorage.setItem('bgChoice', 'Sailor');
-//     localStorage.setItem('strengthVal', 7);
-//     localStorage.setItem('dexterityVal', 10);
-//     localStorage.setItem('constitutionVal', 3);
-//     localStorage.setItem('intelligenceVal', 5);
-//     localStorage.setItem('wisdomVal', 15);
-//     localStorage.setItem('charismaVal', 12);
-// }
-
-const saveNPCDataToLocalStorage = async () => {
-    fetch('/api//users/randomnpc')
-      .then(response => response.json())
-      .then(npc => {
-        // Access specific attributes from the NPC data
-        const npcName = npc.character.name;
-        console.log(npcName);
-        // const npcStats = npc.stats;
-        // ... access other attributes as needed
-
-        // Store attributes in local storage
-        // localStorage.setItem('npcName', npcName);
-        // localStorage.setItem('npcStats', JSON.stringify(npcStats));
-        // ... store other attributes as needed
-      })
-      .catch(error => {
-        console.error('Error:', error);
-      });
-  }
+      localStorage.setItem('nameChoice', randomName);
+      localStorage.setItem('raceChoice', randomRace);
+      localStorage.setItem('classChoice', randomClass);
+      localStorage.setItem('bgChoice', randomBg);
+      localStorage.setItem('strengthVal', randomStr);
+      localStorage.setItem('dexterityVal', randomDex);
+      localStorage.setItem('constitutionVal', randomCon);
+      localStorage.setItem('intelligenceVal', randomInt);
+      localStorage.setItem('wisdomVal', randomWis);
+      localStorage.setItem('charismaVal', randomCha);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+}
